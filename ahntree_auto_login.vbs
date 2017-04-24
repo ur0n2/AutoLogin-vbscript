@@ -7,11 +7,11 @@ WScript.Quit Main
 Function Main
   Set IE = WScript.CreateObject("InternetExplorer.Application", "IE")
   IE.Visible = True
-  IE.Navigate "http://10.2.102.150/AhnTree/"
+  IE.Navigate "http://x.x.x.x"
   Wait IE
 
   With IE.Document
-    .all.id.value = "jhlee.trainee" 'ID
+    .all.id.value = "TEST_ID" 'ID
     .all.pass.value = "123123" 'Password
     .all.form.submit()
   End With
@@ -23,7 +23,7 @@ Function Main
   Set WshShell = CreateObject("WScript.Shell")
   intResult = WshShell.Popup(strMessage, intTimeout, strTitle)
 
-  IE.Navigate "http://10.2.102.150/AhnTree/attendance.page"
+  IE.Navigate "http://x.x.x.x/attendance.page"
 End Function
 
 Sub Wait(IE)
